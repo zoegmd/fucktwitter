@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Blocked</title>
+    <link rel="icon" type="image/png" href="xlogo.png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background: #000; /* Dark background for a more black feel */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 10px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            animation: slideIn 1s ease-out;
+        }
+
+        .footer {
+            font-size: 14px;
+            opacity: 0.7;
+            position: absolute;
+            bottom: 10px;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .footer:hover {
+            opacity: 1;
+            color: #00bfff;
+        }
+
+        .button {
+            background-color: #333;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #00bfff;
+            color: #111;
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        .close-button {
+            background-color: #ff4c4c;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .close-button:hover {
+            background-color: #ff1a1a;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Access has been blocked by your extension.</h1>
+    <h1>X.com has been blocked.</h1>
+
+    <!-- Button to show Twitter info -->
+    <button class="button" onclick="showTwitterInfo()">Show Twitter Info</button>
+
+    <div id="twitterInfo" style="display:none; margin-top: 20px;">
+        <p><strong>When was Twitter made?</strong> <br>March 2006</p>
+        <p><strong>Who made Twitter?</strong> <br>Jack Dorsey, Noah Glass, Biz Stone & Evan Williams</p>
+        <p><strong>CEO of Twitter:</strong> <br>Elon Musk</p>
+        <p><strong>Worst person on Twitter:</strong> <br>Donald Trump</p>
+
+        <!-- Close button to hide the info -->
+        <button class="close-button" onclick="closeTwitterInfo()">Close</button>
+    </div>
+
+    <div class="footer">Made by poocat</div>
+
+    <script>
+        function showTwitterInfo() {
+            document.getElementById('twitterInfo').style.display = 'block';
+        }
+
+        function closeTwitterInfo() {
+            document.getElementById('twitterInfo').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
